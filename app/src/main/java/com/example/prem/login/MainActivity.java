@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         else {
             counter--;
+            Toast.makeText(getApplicationContext(),"Wrong Credintials",Toast.LENGTH_SHORT).show();
 
             Info.setText("No of attempts remaining: "+ String.valueOf(counter));
             if(counter==0){
